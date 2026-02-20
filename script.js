@@ -1,38 +1,40 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-    // 1. Üst Navbar Aç/Bağla (Hamburger) və Body Scroll qıfılı
+    // 1. ÜST NAVBAR AÇ/BAĞLA (Mobil üçün Hamburger Menyusu)
     const menuBtn = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
     const body = document.body;
     
-    menuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = menuBtn.querySelector('i');
-        
-        if(navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
-            body.style.overflow = 'hidden'; // Menyu açıq olanda arxa planı sürüşdürməyi bağlayır
-        } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-            body.style.overflow = 'auto';
-        }
-    });
-
-    // Menyu linklərinə klikləyəndə menyunu bağla
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
-            body.style.overflow = 'auto';
+    if (menuBtn && navLinks) {
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            
+            if(navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+                body.style.overflow = 'hidden'; // Arxanı sürüşdürməyi bağlayır
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+                body.style.overflow = 'auto'; // Sürüşdürməni açır
+            }
         });
-    });
 
-    // 2. Scroll Reveal (Aşağı düşdükcə peyda olma)
+        // Menyu linklərinə klikləyəndə menyunu bağla
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuBtn.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                body.style.overflow = 'auto';
+            });
+        });
+    }
+
+    // 2. SCROLL REVEAL (Aşağı düşdükcə elementlərin peyda olması)
     const reveals = document.querySelectorAll('.reveal');
     const revealOptions = {
-        threshold: 0.1, // Elementin 10%-i görünəndə işə düşür (mobil üçün daha yaxşıdır)
+        threshold: 0.1, // Elementin 10%-i görünəndə işə düşür
         rootMargin: "0px 0px -20px 0px"
     };
 
@@ -49,20 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(reveal);
     });
 
-    // 3. Menyu Kateqoriya Filtri (Sürətli və Smooth)
+    // 3. MENYU KATEQORİYA FİLTRİ (Hamısı, Setlər, Fast Food və s.)
     const filterBtns = document.querySelectorAll('.filter-btn');
     const menuItems = document.querySelectorAll('.main-item');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            document.querySelector('.filter-btn.active').classList.remove('active');
+            // Aktiv class-ı dəyiş
+            const currentActive = document.querySelector('.filter-btn.active');
+            if(currentActive) currentActive.classList.remove('active');
             btn.classList.add('active');
 
             const filterValue = btn.getAttribute('data-filter');
 
             menuItems.forEach(item => {
                 if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.style.display = 'block'; // Mobildə grid/block daha yaxşı işləyir
+                    item.style.display = 'block'; 
                     setTimeout(() => {
                         item.style.opacity = '1';
                         item.style.transform = 'translateY(0)';
@@ -78,12 +82,50 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Alt Naviqasiya Barı (Aktiv statusu dəyişmə)
+    // 4. ALT NAVİQASİYA BARI (Mobil üçün App stili - Aktiv rəngini dəyişmə)
     const bottomNavItems = document.querySelectorAll('.mobile-bottom-nav .nav-item:not(.center-btn-nav)');
     bottomNavItems.forEach(item => {
         item.addEventListener('click', () => {
-            document.querySelector('.mobile-bottom-nav .nav-item.active')?.classList.remove('active');
+            const currentActive = document.querySelector('.mobile-bottom-nav .nav-item.active');
+            if(currentActive) currentActive.classList.remove('active');
             item.classList.add('active');
         });
     });
+
 });
+
+// 5. MƏHSUL ÜÇÜN LÜKS MODAL FUNKSİYALARI (Tərkib göstərmək üçün)
+// Bu funksiyalar qlobal olmalıdır ki, HTML-dən 'onclick' ilə çağırıla bilsin
+window.openProductModal = function(element) {
+    // Kliklənən kartdakı məlumatları (data-...) götürürük
+    const title = element.getAttribute('data-title');
+    const price = element.getAttribute('data-price');
+    const desc = element.getAttribute('data-desc');
+    const img = element.getAttribute('data-img');
+
+    // Modaldakı uyğun yerlərə məlumatları yazırıq
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalPrice').innerText = price;
+    document.getElementById('modalDesc').innerHTML = desc;
+    document.getElementById('modalImg').style.backgroundImage = `url('${img}')`;
+
+    // Modalı göstəririk və arxa fonun sürüşməsini dayandırırıq
+    document.getElementById('productModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+};
+
+window.closeProductModal = function() {
+    const modal = document.getElementById('productModal');
+    if(modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Scroll-u geri qaytarırıq
+    }
+};
+
+// Kənara (qara fona) basdıqda modalı bağlamaq üçün
+const productModal = document.getElementById('productModal');
+if (productModal) {
+    productModal.addEventListener('click', function(e) {
+        if(e.target === this) closeProductModal();
+    });
+}

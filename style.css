@@ -190,3 +190,111 @@ h1, h2, h3, h4, .logo { font-family: var(--font-head); }
     .social-icons { justify-content: flex-start; }
     .footer-info ul li { justify-content: flex-start; }
 }
+/* --- ULTRA-PREMIUM MODAL (BOTTOM SHEET VIBE) --- */
+
+.premium-modal-overlay {
+    position: fixed; inset: 0; width: 100%; height: 100vh;
+    background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    z-index: 2000; display: flex; align-items: flex-end; /* Mobildə aşağıdan çıxması üçün */
+    justify-content: center; opacity: 0; visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.4s;
+}
+
+.premium-modal-overlay.active { opacity: 1; visibility: visible; }
+
+.premium-modal-content {
+    width: 100%; max-width: 600px; max-height: 85vh;
+    background: #0d0d0d; border-radius: 30px 30px 0 0; /* Tətbiqlərdəki kimi üst künclər dairəvi */
+    display: flex; flex-direction: column; position: relative;
+    transform: translateY(100%); /* Başlanğıcda ekranın altında gizlənir */
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.8);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.premium-modal-overlay.active .premium-modal-content {
+    transform: translateY(0);
+}
+
+/* Kapatma Butonu ve Drag Handle (Kaydırma Çizgisi) */
+.modal-drag-handle {
+    width: 40px; height: 5px; background: rgba(255,255,255,0.2);
+    border-radius: 10px; margin: 12px auto;
+}
+
+.modal-close-btn {
+    position: absolute; top: 20px; right: 20px;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1); color: #fff;
+    border: none; font-size: 1.1rem; cursor: pointer;
+    backdrop-filter: blur(5px); z-index: 10; transition: var(--transition);
+}
+.modal-close-btn:hover { background: var(--gradient-gold); color: #000; }
+
+/* Modal Header (Görsel ve Başlık) */
+.modal-header-wrapper { position: relative; height: 160px; }
+.modal-hero-img {
+    width: 100%; height: 100%;
+    background-size: cover; background-position: center;
+    border-radius: 20px 20px 0 0; /* İç şəklin də küncləri eyni olsun deyə */
+}
+.modal-title-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, #0d0d0d 5%, transparent 100%);
+    display: flex; align-items: flex-end; padding: 20px 25px;
+}
+.modal-title-overlay h2 {
+    font-family: var(--font-head); font-size: 2rem; color: #fff;
+    letter-spacing: 0.5px; margin: 0;
+}
+
+/* Modal Body & List (Modern UI) */
+.modal-body-scroll {
+    padding: 10px 25px 30px; overflow-y: auto; flex-grow: 1;
+}
+
+.modern-item-list { list-style: none; margin: 0; padding: 0; }
+
+.modern-item-list li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.modern-item-list li:last-child { border-bottom: none; }
+
+.item-info { flex: 1; padding-right: 15px; }
+.item-title {
+    font-size: 1.05rem; font-weight: 500; color: #fff;
+    line-height: 1.3; display: block;
+}
+
+/* Lüks Fiyat Etiketi (Pill Design) */
+.item-price-pill {
+    background: rgba(212, 175, 55, 0.1); /* Qızılı rəngin çox şəffaf halı */
+    color: var(--gold-1);
+    font-family: var(--font-head); font-weight: 700; font-size: 1.1rem;
+    padding: 8px 16px; border-radius: 20px; /* Hap görünümü */
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    white-space: nowrap;
+}
+
+/* Scrollbar Gizleme (Daha temiz görünüm için) */
+.modal-body-scroll::-webkit-scrollbar { display: none; }
+
+/* Kompüter Ekranları Üçün Modalı Ortala */
+@media (min-width: 769px) {
+    .premium-modal-overlay { align-items: center; }
+    .premium-modal-content { border-radius: 24px; max-height: 80vh; }
+    .modal-hero-img { border-radius: 24px 24px 0 0; }
+    .modal-drag-handle { display: none; } /* Kompyuterdə bu xəttə ehtiyac yoxdur */
+}/* Məhsul Modalı Üçün Xüsusi Stillər */
+.modal-price-container { margin: 20px 0; display: flex; align-items: center; }
+.modal-description { font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; }
+
+/* Modal içindəki Set siyahısı dizaynı */
+.modal-ing-list { list-style: none; padding: 0; margin: 15px 0; }
+.modal-ing-list li { 
+    margin-bottom: 12px; font-size: 1rem; color: #ddd; 
+    display: flex; align-items: center; gap: 12px; 
+    border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px;
+}
+.modal-ing-list li:last-child { border-bottom: none; }

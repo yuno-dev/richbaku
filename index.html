@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
-    <title>Rich Baku | Premium Restaurant & Lounge</title>
+    <title>Rich Baku | Restaurant & Lounge</title>
     <meta name="description" content="Rich Baku - Bakının mərkəzində modern mətbəx, unudulmaz dadlar və eksklüziv atmosfer təqdim edən premium restoran. İndi sifariş verin və ya masa rezerv edin.">
     <meta name="keywords" content="Rich Baku, restoran bakı, premium restoran, steyk çatdırılma, lounge bakı, fine dining baku, azerbaijan restaurant, dadlı yeməklər">
     <meta name="author" content="Rich Baku">
@@ -83,61 +83,238 @@
             </div>
         </div>
     </section>
-
-    <section id="menu" class="section bg-darker">
+<section id="menu" class="section bg-darker">
         <div class="container">
             <div class="section-header reveal">
                 <h2 class="section-title">Kolleksiya <span class="text-gradient">Menyusu</span></h2>
+                <p style="color: #888; font-size: 0.9rem; margin-top: 10px;">
+                    <i class="fas fa-info-circle"></i> Məhsulun tərkibi və detayı üçün üzərinə toxunun. (Şəkillər təmsilidir)
+                </p>
             </div>
-            
+
             <div class="menu-filters reveal delay-1">
                 <button class="filter-btn active" data-filter="all">Hamısı</button>
-                <button class="filter-btn" data-filter="mains">Əsas Yeməklər</button>
-                <button class="filter-btn" data-filter="starters">Qəlyanaltılar</button>
-                <button class="filter-btn" data-filter="drinks">İçkilər</button>
-                <button class="filter-btn" data-filter="desserts">Şirniyyat</button>
+                <button class="filter-btn" data-filter="sets">Qəlyan Setləri</button>
+                <button class="filter-btn" data-filter="salads">Salatlar</button>
+                <button class="filter-btn" data-filter="soups">Şorbalar</button>
+                <button class="filter-btn" data-filter="fastfood">Fast Food</button>
+                <button class="filter-btn" data-filter="mains">Qazan Yeməkləri</button>
+                <button class="filter-btn" data-filter="sausages">Sosislər</button>
+                <button class="filter-btn" data-filter="desserts">Çərəz & Desert</button>
+                <button class="filter-btn" data-filter="jams">Mürəbbə & Meyvə</button>
             </div>
 
             <div class="menu-grid">
-                <div class="menu-item glass-card reveal main-item" data-category="mains">
-                    <div class="item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8NTFtxCxBMVSFZ1Vn8iq0wTgihOSAEHvkHg&s" alt="Steyk"></div>
-                    <div class="item-details">
-                        <div class="item-header"><h3>Truffle Ribeye</h3><span class="price">42 ₼</span></div>
-                        <p>28 gün quru yetişdirilmiş mal əti, trüfel sousu.</p>
-                    </div>
+                
+                <div class="menu-item glass-card reveal main-item" data-category="sets" data-title="SET 1" data-price="19.00 AZN" data-desc="<ul class='modal-ing-list'><li><i class='fas fa-check text-gradient'></i> Qəlyan şəxsi 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Çay 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Mürəbbə 1 ədəd</li></ul>" data-img="https://images.unsplash.com/photo-1518559091873-5188f5eb221f?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1518559091873-5188f5eb221f?q=80&w=800" alt="SET 1"></div>
+                    <div class="item-details"><div class="item-header"><h3>SET 1</h3><span class="price">19 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Tərkibi görmək üçün toxunun <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
                 </div>
 
-                <div class="menu-item glass-card reveal main-item delay-1" data-category="mains">
-                    <div class="item-image"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=800&auto=format&fit=crop" alt="Salmon"></div>
-                    <div class="item-details">
-                        <div class="item-header"><h3>Qızılbalıq Fileto</h3><span class="price">35 ₼</span></div>
-                        <p>Norveç qızılbalığı, kinoa, avokado püresi.</p>
-                    </div>
+                <div class="menu-item glass-card reveal main-item" data-category="sets" data-title="SET 2" data-price="25.00 AZN" data-desc="<ul class='modal-ing-list'><li><i class='fas fa-check text-gradient'></i> Qəlyan 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Çay 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Mürəbbə 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Çərəz 1 ədəd</li></ul>" data-img="https://images.unsplash.com/photo-1552538165-276906a6b5a3?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1552538165-276906a6b5a3?q=80&w=800" alt="SET 2"></div>
+                    <div class="item-details"><div class="item-header"><h3>SET 2</h3><span class="price">25 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Tərkibi görmək üçün toxunun <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
                 </div>
 
-                <div class="menu-item glass-card reveal main-item" data-category="starters">
-                    <div class="item-image"><img src="https://images.unsplash.com/photo-1626844131082-256783844137?q=80&w=800&auto=format&fit=crop" alt="Tartar"></div>
-                    <div class="item-details">
-                        <div class="item-header"><h3>Can Əti Tartarı</h3><span class="price">24 ₼</span></div>
-                        <p>Kapers, xardal, bildirçin yumurtası.</p>
-                    </div>
+                <div class="menu-item glass-card reveal main-item" data-category="sets" data-title="SET 3" data-price="30.00 AZN" data-desc="<ul class='modal-ing-list'><li><i class='fas fa-check text-gradient'></i> Qəlyan 2 ədəd</li><li><i class='fas fa-check text-gradient'></i> Çay 2 ədəd</li><li><i class='fas fa-check text-gradient'></i> Mürəbbə 1 ədəd</li></ul>" data-img="https://images.unsplash.com/photo-1572666578051-512140bb0f86?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1572666578051-512140bb0f86?q=80&w=800" alt="SET 3"></div>
+                    <div class="item-details"><div class="item-header"><h3>SET 3</h3><span class="price">30 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Tərkibi görmək üçün toxunun <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
                 </div>
 
-                <div class="menu-item glass-card reveal main-item delay-1" data-category="drinks">
-                    <div class="item-image"><img src="https://www.halfbakedharvest.com/wp-content/uploads/2019/10/Smoky-Harvest-Apple-Cider-Margarita-1.jpg" alt="Cocktail"></div>
-                    <div class="item-details">
-                        <div class="item-header"><h3>Rich Signature</h3><span class="price">18 ₼</span></div>
-                        <p>Passion fruit, xüsusi sirop və qızılı toz.</p>
-                    </div>
+                <div class="menu-item glass-card reveal main-item" data-category="sets" data-title="SET 4" data-price="40.00 AZN" data-desc="<ul class='modal-ing-list'><li><i class='fas fa-check text-gradient'></i> Qəlyan 2 ədəd</li><li><i class='fas fa-check text-gradient'></i> Çay 2 ədəd</li><li><i class='fas fa-check text-gradient'></i> Mürəbbə 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Çərəz 1 ədəd</li></ul>" data-img="https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=800" alt="SET 4"></div>
+                    <div class="item-details"><div class="item-header"><h3>SET 4</h3><span class="price">40 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Tərkibi görmək üçün toxunun <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
                 </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="sets" data-title="SET 5" data-price="50.00 AZN" data-desc="<ul class='modal-ing-list'><li><i class='fas fa-check text-gradient'></i> Qəlyan 2 ədəd</li><li><i class='fas fa-check text-gradient'></i> Çay 3 ədəd + Rulet 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Mürəbbə 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Lokum 1 ədəd + Çərəz 1 ədəd</li><li><i class='fas fa-check text-gradient'></i> Şokolad 1 ədəd</li></ul>" data-img="https://images.unsplash.com/photo-1616854125866-e0fbcbd5a287?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1616854125866-e0fbcbd5a287?q=80&w=800" alt="SET 5"></div>
+                    <div class="item-details"><div class="item-header"><h3>SET 5</h3><span class="price">50 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Tərkibi görmək üçün toxunun <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Çoban Salatı" data-price="4.00 AZN" data-desc="Təzə pomidor, xiyar, göyərti və xüsusi sous ilə." data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Çoban Salatı"></div>
+                    <div class="item-details"><div class="item-header"><h3>Çoban salatı</h3><span class="price">4 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Vişnəli pomidor" data-price="5.00 AZN" data-desc="Xüsusi vişnə souslu təzə pomidor salatı." data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Vişnəli pomidor"></div>
+                    <div class="item-details"><div class="item-header"><h3>Vişnəli pomidor</h3><span class="price">5 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Xırt-Xırt badımcan" data-price="5.00 AZN" data-desc="Xüsusi sousla qızardılmış xırtıldayan badımcan salatı." data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Xırt-Xırt badımcan"></div>
+                    <div class="item-details"><div class="item-header"><h3>Xırt-Xırt badımcan</h3><span class="price">5 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Sezar toyuq" data-price="8.00 AZN" data-desc="Klassik sezar sousu, aysberq, parmezan pendiri və qızardılmış toyuq filesi." data-img="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=800" alt="Sezar toyuq"></div>
+                    <div class="item-details"><div class="item-header"><h3>Sezar toyuq</h3><span class="price">8 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Sezar krivetka" data-price="10.00 AZN" data-desc="Klassik sezar sousu, aysberq, parmezan pendiri və ləzzətli krevetkalarlar." data-img="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1550304943-4f24f54ddde9?q=80&w=800" alt="Sezar krivetka"></div>
+                    <div class="item-details"><div class="item-header"><h3>Sezar krivetka</h3><span class="price">10 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Turşu assorti" data-price="5.00 AZN" data-desc="Qarışıq ev turşuları çeşidi." data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Turşu assorti"></div>
+                    <div class="item-details"><div class="item-header"><h3>Turşu assorti</h3><span class="price">5 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Pendir assorti" data-price="5.00 AZN" data-desc="Fərqli və ləzzətli pendir çeşidləri." data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Pendir assorti"></div>
+                    <div class="item-details"><div class="item-header"><h3>Pendir assorti</h3><span class="price">5 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Zeytun assorti" data-price="4.00 AZN" data-desc="Qara və yaşıl zeytun çeşidləri." data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Zeytun assorti"></div>
+                    <div class="item-details"><div class="item-header"><h3>Zeytun assorti</h3><span class="price">4 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="salads" data-title="Digər Məzələr" data-price="2.00 - 7.00 AZN" data-desc="<ul class='modal-ing-list'><li>Kök limon - 2 AZN</li><li>Xiyar limon - 2 AZN</li><li>Badımcan ikra - 3 AZN</li><li>Süzmə - 2 AZN</li><li>Acika - 2 AZN</li><li>Yunan salatı - 7 AZN</li><li>Mal dili paştet - 3 AZN</li><li>Selyotka balıq - 4 AZN</li><li>Tərəvəz buketi - 6 AZN</li><li>Göyərti - 2 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=800" alt="Digər Məzələr"></div>
+                    <div class="item-details"><div class="item-header"><h3>Digər Məzə & Salatlar</h3><span class="price">~</span></div><p style="font-size: 0.85rem; color: #aaa;">Bütün məzə siyahısı üçün toxunun <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="fastfood" data-title="Şaurma fri" data-price="9.00 AZN" data-desc="Xüsusi souslu ləzzətli şaurma və kartof fri." data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" alt="Şaurma fri"></div>
+                    <div class="item-details"><div class="item-header"><h3>Şaurma fri</h3><span class="price">9 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="fastfood" data-title="Çizburger" data-price="10.00 AZN" data-desc="100% mal əti kotleti, pendir, xüsusi souslar." data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" alt="Çizburger"></div>
+                    <div class="item-details"><div class="item-header"><h3>Çizburger</h3><span class="price">10 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="fastfood" data-title="Burger" data-price="8.00 AZN" data-desc="Klassik mal əti burgeri." data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" alt="Burger"></div>
+                    <div class="item-details"><div class="item-header"><h3>Burger</h3><span class="price">8 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="fastfood" data-title="Nugets" data-price="7.00 AZN" data-desc="Xırtıldayan toyuq nugetsləri." data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" alt="Nugets"></div>
+                    <div class="item-details"><div class="item-header"><h3>Nugets</h3><span class="price">7 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="fastfood" data-title="Kartof fri" data-price="3.00 AZN" data-desc="Qızardılmış kartof dilimləri." data-img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800" alt="Kartof fri"></div>
+                    <div class="item-details"><div class="item-header"><h3>Kartof fri</h3><span class="price">3 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="mains" data-title="Vişnəli can əti" data-price="11.00 AZN" data-desc="Xüsusi vişnə sousu ilə hazırlanmış yumşaq can əti." data-img="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" alt="Vişnəli can əti"></div>
+                    <div class="item-details"><div class="item-header"><h3>Vişnəli can əti</h3><span class="price">11 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="mains" data-title="Nar qovurma" data-price="11.00 AZN" data-desc="Nar dənələri ilə qovrulmuş ləzzətli ət." data-img="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" alt="Nar qovurma"></div>
+                    <div class="item-details"><div class="item-header"><h3>Nar qovurma</h3><span class="price">11 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="mains" data-title="Çoban qovurma" data-price="12.00 AZN" data-desc="Ənənəvi reseptlə hazırlanmış çoban qovurma." data-img="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" alt="Çoban qovurma"></div>
+                    <div class="item-details"><div class="item-header"><h3>Çoban qovurma</h3><span class="price">12 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="mains" data-title="Kənd çolpası tabaka" data-price="15.00 AZN" data-desc="Tam bişmiş xırtıldayan kənd çolpası tabakası." data-img="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" alt="Kənd çolpası tabaka"></div>
+                    <div class="item-details"><div class="item-header"><h3>Kənd çolpası tabaka</h3><span class="price">15 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Detallara bax <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="mains" data-title="Digər Qazan Yeməkləri" data-price="7.00 - 24.00 AZN" data-desc="<ul class='modal-ing-list'><li>Tabaka broyler - 13 AZN</li><li>Quzu qovurma - 12 AZN</li><li>Tuşonka - 8 AZN</li><li>Tava kababı - 8 AZN</li><li>Cız-Bız - 7 AZN</li><li>Çolpa sacı (4 nəfərlik) - 24 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=800" alt="Digər Qazan Yeməkləri"></div>
+                    <div class="item-details"><div class="item-header"><h3>Digər Qazan Yeməkləri</h3><span class="price">~</span></div><p style="font-size: 0.85rem; color: #aaa;">Cız-bız, Sac və s. siyahısı <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="soups" data-title="Şorbalar" data-price="3.00 - 4.00 AZN" data-desc="<ul class='modal-ing-list'><li>Mərci şorbası - 3 AZN</li><li>Düşbərə - 4 AZN</li><li>Toyuq şorbası - 4 AZN</li><li>Tomat şorbası - 4 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800" alt="Şorbalar"></div>
+                    <div class="item-details"><div class="item-header"><h3>Günün Şorbaları</h3><span class="price">3-4 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Mərci, Düşbərə və s. <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="sausages" data-title="Sosislər" data-price="3.00 - 5.00 AZN" data-desc="<ul class='modal-ing-list'><li>İvriya 2 ədəd - 4 AZN</li><li>Sardelka 2 ədəd - 5 AZN</li><li>Südlü 2 ədəd - 3 AZN</li><li>Oxotniçya 2 ədəd - 5 AZN</li><li>Manqalüstü 2 ədəd - 4 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1595854341625-f33ee10dbf94?q=80&w=800" alt="Sosislər"></div>
+                    <div class="item-details"><div class="item-header"><h3>Ləzzətli Sosislər</h3><span class="price">3-5 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Bütün növlər və qiymətlər <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="desserts" data-title="Şirniyyat & Desert" data-price="3.00 - 5.00 AZN" data-desc="<ul class='modal-ing-list'><li>Şokolad - 3 AZN</li><li>Çinar şokoladı - 5 AZN</li><li>Rulet - 3 AZN</li><li>Künəfə - 5 AZN</li><li>Türk paxlavası - 4 AZN</li><li>Tort - 5 AZN</li><li>Lokum - 3 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800" alt="Şirniyyat"></div>
+                    <div class="item-details"><div class="item-header"><h3>Şirniyyat Çeşidləri</h3><span class="price">3-5 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Paxlava, Künəfə, Tort və s. <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="desserts" data-title="Çərəzlər və Xurma" data-price="4.00 - 15.00 AZN" data-desc="<ul class='modal-ing-list'><li>Çərəz qarışıq - 5 AZN</li><li>Çərəz böyük - 10 AZN</li><li>Xurma - 15 AZN</li><li>Xurma şokoladlı - 4 AZN</li><li>Quru meyvə - 4 AZN</li><li>Qara kişmiş - 4 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=800" alt="Çərəzlər"></div>
+                    <div class="item-details"><div class="item-header"><h3>Çərəz və Quruyemiş</h3><span class="price">4-15 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Tam siyahı üçün toxunun <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="jams" data-title="Mürəbbə Çeşidləri" data-price="5.00 - 8.00 AZN" data-desc="<ul class='modal-ing-list'><li>Ağ gilas - 6 AZN</li><li>Çiyələk - 5 AZN</li><li>Qoz qara - 6 AZN</li><li>Qoz ləpə - 7 AZN</li><li>Xurma - 6 AZN</li><li>Armud - 6 AZN</li><li>Şəftəli - 6 AZN</li><li>Kakos - 8 AZN</li><li>Snickers - 6 AZN</li><li>Plombir - 7 AZN</li><li>Zeytun - 6 AZN</li><li>Badam - 6 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1582293041079-7814c2f12063?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1582293041079-7814c2f12063?q=80&w=800" alt="Mürəbbələr"></div>
+                    <div class="item-details"><div class="item-header"><h3>Mürəbbə Çeşidləri</h3><span class="price">5-8 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">12 fərqli növ mürəbbə <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
+                <div class="menu-item glass-card reveal main-item" data-category="jams" data-title="Meyvələr" data-price="2.00 - 15.00 AZN" data-desc="<ul class='modal-ing-list'><li>Meyvə mövsüm kiçik - 10 AZN</li><li>Meyvə mövsüm böyük - 15 AZN</li><li>Alma nanəli - 3 AZN</li><li>Alça əzməsi - 3 AZN</li><li>Nar - 2 AZN</li></ul>" data-img="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=800" onclick="openProductModal(this)">
+                    <div class="item-image"><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=800" alt="Meyvələr"></div>
+                    <div class="item-details"><div class="item-header"><h3>Meyvə və Təravət</h3><span class="price">2-15 ₼</span></div><p style="font-size: 0.85rem; color: #aaa;">Mövsüm meyvələri <i class="fas fa-hand-pointer text-gradient" style="font-size: 0.8rem;"></i></p></div>
+                </div>
+
             </div>
             
             <div class="center-btn reveal mt-20">
-                <a href="https://www.instagram.com/rich_baku0" target="_blank" class="btn btn-outline w-100-mobile">İnstagramda Bax <i class="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/rich_baku0" target="_blank" class="btn btn-outline w-100-mobile">İnstagramda Bizi İzləyin <i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </section>
 
+    <div id="productModal" class="premium-modal-overlay">
+        <div class="premium-modal-content">
+            <div class="modal-drag-handle"></div>
+            
+            <button class="modal-close-btn" onclick="closeProductModal()">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-header-wrapper">
+                <div class="modal-hero-img" id="modalImg"></div>
+                <div class="modal-title-overlay">
+                    <h2 id="modalTitle">Məhsul Adı</h2>
+                </div>
+            </div>
+
+            <div class="modal-body-scroll">
+                <div class="modal-price-container">
+                    <div class="item-price-pill" id="modalPrice">0.00 AZN</div>
+                </div>
+                
+                <h4 style="color: #fff; margin-bottom: 10px; font-family: var(--font-head);">Tərkibi:</h4>
+                <div class="modal-description" id="modalDesc">
+                    </div>
+
+                <a href="tel:+994501234567" class="btn btn-primary" style="width: 100%; margin-top: 30px; border-radius: 12px;">
+                    <i class="fas fa-motorcycle"></i> İndi Sifariş Ver
+                </a>
+            </div>
+        </div>
+    </div>
+<div id="categoryModal" class="premium-modal-overlay">
+        <div class="premium-modal-content">
+            <div class="modal-drag-handle"></div>
+            
+            <button class="modal-close-btn" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="modal-header-wrapper">
+                <div class="modal-hero-img" id="modalImg"></div>
+                <div class="modal-title-overlay">
+                    <h2 id="modalTitle">Kategoriya</h2>
+                </div>
+            </div>
+
+            <div class="modal-body-scroll">
+                <ul class="modern-item-list" id="modalList">
+                    </ul>
+            </div>
+        </div>
+    </div>
     <section id="delivery" class="section">
         <div class="container">
             <div class="delivery-wrapper glass-card reveal">
